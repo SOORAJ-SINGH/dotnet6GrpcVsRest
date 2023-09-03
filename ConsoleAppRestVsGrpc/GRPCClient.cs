@@ -2,7 +2,7 @@
 using ModelLibrary.GRPC;
 using static ModelLibrary.GRPC.MeteoriteLandingsService;
 
-namespace RESTvsGRPC
+namespace ConsoleAppRestVsGrpc
 {
     public class GRPCClient
     {

@@ -10,6 +10,12 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrpcAPI", "GrpcAPI\GrpcAPI.csproj", "{8BC7E2E8-25DE-4360-9758-D6805358A356}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RESTvsGRPC", "RESTvsGRPC\RESTvsGRPC.csproj", "{6D1AE70D-CC01-4BB3-A317-CE1083364BDA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8BC7E2E8-25DE-4360-9758-D6805358A356} = {8BC7E2E8-25DE-4360-9758-D6805358A356}
+		{A19DB6D8-DC99-4C2C-A8C1-716DBE623D78} = {A19DB6D8-DC99-4C2C-A8C1-716DBE623D78}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppRestVsGrpc", "ConsoleAppRestVsGrpc\ConsoleAppRestVsGrpc.csproj", "{30F87825-7AD0-42EB-BD00-6085E1CACC1C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +39,10 @@ Global
 		{6D1AE70D-CC01-4BB3-A317-CE1083364BDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D1AE70D-CC01-4BB3-A317-CE1083364BDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D1AE70D-CC01-4BB3-A317-CE1083364BDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30F87825-7AD0-42EB-BD00-6085E1CACC1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30F87825-7AD0-42EB-BD00-6085E1CACC1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30F87825-7AD0-42EB-BD00-6085E1CACC1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30F87825-7AD0-42EB-BD00-6085E1CACC1C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

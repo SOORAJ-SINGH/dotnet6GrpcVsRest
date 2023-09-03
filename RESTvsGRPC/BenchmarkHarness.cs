@@ -11,7 +11,8 @@ namespace RESTvsGRPC
     [HtmlExporter]
     public class BenchmarkHarness
     {
-        [Params(100, 200)]
+        //[Params(100, 200)]
+        [Params(100)]
         public int IterationCount;
 
         readonly RESTClient restClient = new RESTClient();
@@ -53,14 +54,14 @@ namespace RESTvsGRPC
             }
         }
 
-        [Benchmark]
-        public async Task GrpcStreamLargePayloadAsync()
-        {
-            for (int i = 0; i < IterationCount; i++)
-            {
-                await grpcClient.StreamLargePayloadAsync();
-            }
-        }
+        //[Benchmark]
+        //public async Task GrpcStreamLargePayloadAsync()
+        //{
+        //    for (int i = 0; i < IterationCount; i++)
+        //    {
+        //        await grpcClient.StreamLargePayloadAsync();
+        //    }
+        //}
 
         [Benchmark]
         public async Task GrpcGetLargePayloadAsListAsync()

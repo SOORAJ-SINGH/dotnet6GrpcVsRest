@@ -1,7 +1,6 @@
 ﻿using Google.Protobuf;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System;
 
 namespace ModelLibrary.Data
 {
@@ -16,10 +15,10 @@ namespace ModelLibrary.Data
         {
             var converter = new ExpandoObjectConverter();
             var o = converter.ReadJson(reader, objectType, existingValue, serializer);
-            
+
             var text = JsonConvert.SerializeObject(o);
 
-            var message = (IMessage) Activator.CreateInstance(objectType);
+            var message = (IMessage)Activator.CreateInstance(objectType);
 
             var parser = new JsonParser(JsonParser.Settings.Default.WithIgnoreUnknownFields(true));
             return parser.Parse(text, message.Descriptor);
